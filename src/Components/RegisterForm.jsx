@@ -37,9 +37,9 @@ export default function RegisterForm() {
     
   return (
     <div className='flex flex-col pt-5'>
-        <form className='flex flex-col gap-4 justify-center px-60' onSubmit={handleRegister}>
+        <form className='flex flex-col justify-center gap-4 px-60' onSubmit={handleRegister}>
             <div className='flex flex-col'>
-                <label htmlFor='name' className='text-left text-lg'>Name </label>
+                <label htmlFor='name' className='text-lg text-left'>Name </label>
                 <input
                 type='text'
                 id='name'
@@ -47,54 +47,56 @@ export default function RegisterForm() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
-                className='bg-amber-200 border border-gray-400 rounded-md hover:bg-green-800 text-white pl-2'
+                className='pl-2 text-white border border-gray-400 rounded-md bg-amber-200 hover:bg-green-800'
                 />
                 
             </div>
             <div className='flex flex-col'>
-                <label htmlFor='address' className='text-left text-lg'>Address </label>
+                <label htmlFor='address' className='text-lg text-left'>Address </label>
                 <input
                 type='text'
                 id='address'
                 name='address'
                 value={address}
                 onChange={(e) => setAddress(e.target.value)}
-                className='bg-amber-200 border border-gray-400 rounded-md hover:bg-green-800 text-white pl-2'
+                className='pl-2 text-white border border-gray-400 rounded-md bg-amber-200 hover:bg-green-800'
                 />      
             </div>
             <div className='flex flex-col'>
-                <label htmlFor='email' className='text-left text-lg'>Email</label>
+                <label htmlFor='email' className='text-lg text-left'>Email</label>
                 <input
                 type='email'
                 id='email'
                 name='email'
                 value={email}
                 onChange={(e) =>setEmail(e.target.value)}
-                className='bg-amber-200 border border-gray-400 rounded-md hover:bg-green-800 text-white pl-2'
+                className='pl-2 text-white border border-gray-400 rounded-md bg-amber-200 hover:bg-green-800'
                 />
             </div>
             <div className='flex flex-col'>
-                <label htmlFor='password' className='text-left text-lg'>Password</label>
+                <label htmlFor='password' className='text-lg text-left'>Password</label>
                 <input
                 type='password'
                 id='password'
                 name='password'
                 value={password}
                 onChange={(e) =>setPassword(e.target.value)}
-                className='bg-amber-200 border border-gray-400 rounded-md hover:bg-green-800 text-white pl-2'
+                className='pl-2 text-white border border-gray-400 rounded-md bg-amber-200 hover:bg-green-800'
                 />
             </div>
             <div className='flex flex-col'>
-                <label htmlFor='confirm_passsword' className='text-left text-lg'>Confirmation Password</label>
+                <label htmlFor='confirm_passsword' className='text-lg text-left'>Confirmation Password</label>
                 <input
                 type='password'
                 id='confirm_password'
                 name='confirm_password'
                 value={confirm_password}
                 onChange={(e) =>setConfirmPassword(e.target.value)}
-                className='bg-amber-200 border border-gray-400 rounded-md hover:bg-green-800 text-white pl-2'
+                className='pl-2 text-white border border-gray-400 rounded-md bg-amber-200 hover:bg-green-800'
                 />
             </div>
+            <button
+            type='submit' className='justify-center px-10 py-1 mt-3 text-lg text-white rounded-lg bg-slate-900 hover:opacity-50'>Register</button>
             {error && <p>{error}</p>}
             
         </form>

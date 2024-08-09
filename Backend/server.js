@@ -2,11 +2,21 @@
 const express = require('express'); // importing express, a web framework for nodejs.
 const mongoose = require('mongoose'); //importing mongoose to interact with mongodb.
 const dotenv = require('dotenv'); //importing dotenv to load environmental variables from .env file.
+const cors = require ('cors');
 
 dotenv.config(); //loading environment variables from .env file into process.env
 
 const app = express(); // create an express application.
 const port = process.env.PORT || 5000; //sets the port to the .env file value or 5000.
+
+
+// Configure CORS
+app.use(cors({
+  origin: 'http://localhost:3000', // Allow requests from this origin (your frontend URL)
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 
 //connecting to mongodb using mongoose.
 mongoose.connect(process.env.MONGO_URI, {

@@ -19,8 +19,6 @@ export default function Login() {
         <div className='flex flex-col justify-between '>
         <LoginForm/>
         <button className='mt-2 text-end mr-60  text-sm hover:text-red-600'  type='submit'>Forget Password?</button>
-        <button
-        type='submit' className='bg-slate-900 rounded-lg py-1 justify-center text-lg text-white px-10 hover:opacity-50 mt-1'>Login</button>
         </div>
         
         <div className='flex flex-row gap-3 text-center justify-center text-lg mt-3'>
